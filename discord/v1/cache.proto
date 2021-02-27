@@ -120,6 +120,7 @@ message GetGuildEmojiResponse {
 
 message GetGuildMemberVoiceStateRequest {
   fixed64 user_id = 1 [jstype = JS_STRING];
+  fixed64 guild_id = 2 [jstype = JS_STRING];
 }
 
 message GetGuildMemberVoiceStateResponse {
