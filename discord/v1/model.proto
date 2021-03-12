@@ -9,6 +9,11 @@ option go_package =
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 
+message RiptideStatsData {
+  fixed64 alloc = 1;
+  fixed64 res = 2;
+}
+
 message SnowflakeValue {
   fixed64 value = 1 [jstype = JS_STRING];
 }

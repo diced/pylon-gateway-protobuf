@@ -8,7 +8,14 @@ option go_package = "github.com/pylonbot/pylon-gateway-protobuf-go/gateway/v1/se
 import "discord/v1/cache.proto";
 
 service GatewayCache {
+  // guilds
+  rpc GetGuild(pylon.discord.v1.cache.GetGuildRequest)
+      returns (pylon.discord.v1.cache.GetGuildResponse);
+
   // VoiceStates
   rpc GetGuildMemberVoiceState(pylon.discord.v1.cache.GetGuildMemberVoiceStateRequest)
       returns (pylon.discord.v1.cache.GetGuildMemberVoiceStateResponse);
+
+  rpc GetRiptideStats(pylon.discord.v1.cache.GetRiptideStatsRequest)
+      returns (pylon.discord.v1.cache.GetRiptideStatsResponse);
 }

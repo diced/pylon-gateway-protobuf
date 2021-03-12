@@ -12,7 +12,9 @@ import "discord/v1/model.proto";
 
 // GetGuild
 
-message GetGuildRequest {}
+message GetGuildRequest {
+  fixed64 guild_id = 1 [jstype = JS_STRING];
+}
 
 message GetGuildResponse {
   pylon.discord.v1.model.GuildData guild = 1;
@@ -145,4 +147,12 @@ message GetUserRequest {
 
 message GetUserResponse {
   pylon.discord.v1.model.UserData user = 1;
+}
+
+
+// Get Riptide Stats
+message GetRiptideStatsRequest {}
+
+message GetRiptideStatsResponse {
+  pylon.discord.v1.model.RiptideStatsData stats = 1;
 }
